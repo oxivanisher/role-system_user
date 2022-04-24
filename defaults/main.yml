@@ -1,5 +1,17 @@
 ---
-system_user:
-  server: []
-  client: []
-
+system_user: []
+#  - name: usrname
+#    comment: "user name"
+#    uid: 999
+#    password: "$6$PWSTRING"
+#    shell: /bin/bash
+#    groups:
+#      - adm
+#      - cdrom
+#      - sudo
+#      - dip
+#      - plugdev
+#      - lpadmin
+#      - lxd
+#      - sambashare
+#
