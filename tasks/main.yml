@@ -2,5 +2,10 @@
 
 - name: Create system user(s)
   ansible.builtin.user:
+    name: "{{ item.name }}"
+    comment: "{{ item.comment }}"
+    password: "{{ item.password }}"
+    shell: "{{ item.shell }}"
+    groups: "{{ item.groups }}"
   with_items: system_user
 
