@@ -10,5 +10,6 @@
     groups: "{{ item.groups }}"
     state: present
     append: true
+    create_home: false
   with_items: "{{ system_user }}"
 
