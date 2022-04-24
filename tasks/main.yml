@@ -1,15 +1,5 @@
 ---
 
-- name: Print aa
-  ansible.builtin.debug:
-    msg: "{{ system_user }}"
-  # with_items: system_user
-
-- name: Print bb
-  ansible.builtin.debug:
-    msg: "{{ item.name }}"
-  with_items: "{{ system_user }}"
-
 - name: Create system user
   ansible.builtin.user:
     name: "{{ item.name }}"
@@ -19,5 +9,6 @@
     shell: "{{ item.shell }}"
     groups: "{{ item.groups }}"
     state: present
+    append: true
   with_items: "{{ system_user }}"
 
