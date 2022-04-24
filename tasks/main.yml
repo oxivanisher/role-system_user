@@ -1,14 +1,6 @@
 ---
 
-- name: Create system user on servers
-  hosts: all:!client
-  tasks:
-    ansible.builtin.user:
-    with_items: system_user.server
-
-- name: Create system user on clients
-  hosts: client
-  tasks:
-    ansible.builtin.user:
-    with_items: system_user.client
+- name: Create system user(s)
+  ansible.builtin.user:
+  with_items: system_user
 
