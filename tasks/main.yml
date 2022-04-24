@@ -2,17 +2,17 @@
 
 - name: Print the gateway for each host when defined
   ansible.builtin.debug:
-    msg: "{{ system_user_a }}"
+    msg: "{{ system_user }}"
   # with_items: system_user
 
-# - name: Create system user
-#   ansible.builtin.user:
-#     name: "{{ item.name }}"
-#     comment: "{{ item.comment }}"
-#     uid:  "{{ item.uid }}"
-#     password: "{{ item.password }}"
-#     shell: "{{ item.shell }}"
-#     groups: "{{ item.groups }}"
-#     state: present
-#   with_items: system_user
-# 
+- name: Create system user
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    comment: "{{ item.comment }}"
+    uid:  "{{ item.uid }}"
+    password: "{{ item.password }}"
+    shell: "{{ item.shell }}"
+    groups: "{{ item.groups }}"
+    state: present
+  with_items: system_user
+
