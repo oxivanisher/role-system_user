@@ -1,0 +1,12 @@
+---
+
+- name: Create system user on servers
+  hosts: all:!client
+  ansible.builtin.user:
+  with_items: system_user.server
+
+- name: Create system user on clients
+  hosts: client
+  ansible.builtin.user:
+  with_items: system_user.client
+
