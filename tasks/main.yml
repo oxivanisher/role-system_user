@@ -7,7 +7,7 @@
 
 - name: Print bb
   ansible.builtin.debug:
-    msg: "{{ item }}"
+    msg: "{{ item.name }}"
   with_items: "{{ system_user }}"
 
 - name: Create system user
