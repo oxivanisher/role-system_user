@@ -4,7 +4,7 @@
   ansible.builtin.user:
     name: "{{ item.name }}"
     comment: "{{ item.comment }}"
-    uid:  "{{ item.uid }}"
+    uid: "{{ item.uid }}"
     password: "{{ item.password }}"
     shell: "{{ item.shell }}"
     groups: "{{ item.groups }}"
