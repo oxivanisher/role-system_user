@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: system_user
+  namespace: oxivanisher
   author: Marc Urben
   description: Deploy system user
   company: Thunderbluff
