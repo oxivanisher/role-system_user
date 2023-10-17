@@ -1,5 +1,4 @@
 ---
-
 - name: Create system user
   ansible.builtin.user:
     name: "{{ item.name }}"
@@ -11,4 +10,4 @@
     state: present
     append: true
     create_home: false
-  with_items: "{{ system_user }}"
+  loop: "{{ system_user | flatten(levels=1) }}"
