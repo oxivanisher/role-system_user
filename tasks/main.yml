@@ -11,3 +11,5 @@
     append: true
     create_home: false
   loop: "{{ system_user | flatten(levels=1) }}"
+  become: true
+  become_user: root
