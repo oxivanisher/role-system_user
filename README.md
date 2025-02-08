@@ -1,5 +1,6 @@
 system_user
 ===========
+[![Ansible Lint](https://github.com/oxivanisher/role-system_user/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/oxivanisher/role-system_user/actions/workflows/ansible-lint.yml)
 
 Configure OS users.
 
