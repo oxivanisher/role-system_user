@@ -1,6 +1,6 @@
 ---
-system_user: []
-#  - name: usrname
+system_user_users: []
+#  - name: username
 #    comment: "user name"
 #    uid: 999
 #    password: "$6$PWSTRING"
