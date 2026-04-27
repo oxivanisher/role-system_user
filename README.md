@@ -7,11 +7,11 @@ Configure OS users.
 Role Variables
 --------------
 
-| Name              | Comment                                     | Default value                   |
-|-------------------|---------------------------------------------|---------------------------------|
-| system_user_users | A list of users to be ensured on the system | `[]` |
+| Name              | Comment                                     | Default value |
+| ----------------- | ------------------------------------------- | ------------- |
+| system_user_users | A list of users to be ensured on the system | `[]`          |
 
-A element of the list of system users looks like this:
+A element of the list of system users looks like this (only `name` is required, others are omited if unset):
 
 ```yaml
   - name: johndoe
@@ -28,8 +28,8 @@ A element of the list of system users looks like this:
       - lpadmin
       - lxd
       - sambashare
+    system: true
 ```
-
 
 Example Playbook
 ----------------

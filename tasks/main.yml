@@ -2,11 +2,12 @@
 - name: Create system user
   ansible.builtin.user:
     name: "{{ item.name }}"
-    comment: "{{ item.comment }}"
-    uid: "{{ item.uid }}"
-    password: "{{ item.password }}"
-    shell: "{{ item.shell }}"
-    groups: "{{ item.groups }}"
+    comment: "{{ item.comment | default(omit) }}"
+    uid: "{{ item.uid | default(omit) }}"
+    password: "{{ item.password | default(omit) }}"
+    shell: "{{ item.shell | default(omit) }}"
+    groups: "{{ item.groups | default(omit) }}"
+    system: "{{ item.system | default(omit) }}"
     state: present
     append: true
     create_home: false
